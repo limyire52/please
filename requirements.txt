@@ -2,12 +2,3 @@
 fastapi==0.112.0
 pydantic==2.8.2
 uvicorn==0.30.1
-```[cite: 3]
-
-#### 2단계: 깃허브에 변경사항 반영하기 (Git Push)
-VS Code 하단 터미널에 아래 명령어를 순서대로 입력하여 수정된 `requirements.txt` 파일을 깃허브에 업로드합니다.
-
-```bash
-git add requirements.txt
-git commit -m "Update requirements.txt for stable deployment"
-git origin main
