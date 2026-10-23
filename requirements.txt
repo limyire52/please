@@ -1,4 +1,4 @@
 # 기존 Day8에서 사용한 버전을 유지한다. 새 외부 패키지를 추가하지 않는다.
-fastapi==0.112.0
-pydantic==2.8.2
-uvicorn==0.30.1
+fastapi==0.161.1
+pydantic==2.14.1
+uvicorn==0.54.0
