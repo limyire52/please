@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="잠깐 들러, 작은 인사를 남기는 방명록입니다.">
+  <title>작은 방명록 · 한 줄의 안부</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="site-header"><a href="/" class="brand">작은 방명록<span class="brand-dot" aria-hidden="true"></span></a><span>한 줄의 안부</span></header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow">잠깐 머물러도 괜찮아요</p>
+      <h1 id="title">당신의 하루를<br>한 줄 남겨 주세요.</h1>
+      <p class="description">오늘의 기분, 전하고 싶은 말, 가벼운 인사까지.<br>이곳에 다정한 흔적을 남겨 주세요.</p>
+    </section>
+    <div class="board">
+      <section class="write-panel" aria-labelledby="write-title">
+        <p class="section-label">WRITE A NOTE</p>
+        <h2 id="write-title">반가운 인사 남기기</h2>
+        $notification
+        <form action="/entries" method="post" accept-charset="UTF-8">
+          <label for="name">이름 <span>1–20자</span></label>
+          <input id="name" name="name" type="text" required maxlength="20" value="$name" autocomplete="nickname" placeholder="어떤 이름으로 남길까요?">
+          <label for="message">메시지 <span>1–500자</span></label>
+          <textarea id="message" name="message" rows="6" required maxlength="500" placeholder="짧은 안부도 좋아요." aria-describedby="privacy-note">$message</textarea>
+          <p class="form-note" id="privacy-note">모든 글은 공개됩니다. 연락처 등 개인정보는 적지 말아 주세요.</p>
+          <button type="submit">인사 남기기 <span aria-hidden="true">↗</span></button>
+        </form>
+      </section>
+      <section class="notes-panel" id="entries" aria-labelledby="entries-title">
+        <div class="notes-heading"><div><p class="section-label">OUR LITTLE NOTES</p><h2 id="entries-title">남겨진 인사</h2></div><span class="count">$total</span></div>
+        <p class="list-note">가장 최근에 남긴 인사부터 보여드려요.</p>
+        <ul class="entries">$entries</ul>
+        <nav class="pagination" aria-label="방명록 페이지">$pagination</nav>
+      </section>
+    </div>
+  </main>
+  <footer>작은 인사가 모여, 따뜻한 하루가 됩니다.<span>총 $max_entries개의 인사를 담는 작은 공간</span></footer>
+</body>
+</html>

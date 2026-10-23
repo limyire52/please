@@ -1,0 +1,45 @@
+:root { color-scheme: light; --paper: #f6f4ee; --ink: #293c34; --muted: #68726a; --line: #dedfd4; --green: #365544; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.7 system-ui, -apple-system, "Malgun Gothic", sans-serif; }
+a { color: inherit; text-underline-offset: 4px; }
+.site-header { max-width: 1120px; margin: auto; padding: 28px 32px; display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.brand { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink); font-weight: 750; font-size: 16px; }
+.brand-dot { width: 7px; height: 7px; border-radius: 50%; background: #869b65; }
+main { max-width: 1120px; margin: auto; padding: 60px 32px 70px; }
+.intro { padding-bottom: 42px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; color: var(--green); margin: 0 0 18px; }
+h1 { font-family: Georgia, "Batang", serif; font-size: clamp(32px, 5vw, 48px); line-height: 1.4; letter-spacing: -.05em; font-weight: 500; margin: 0 0 20px; }
+.description { color: var(--muted); margin: 0; line-height: 1.9; }
+.board { display: grid; grid-template-columns: minmax(280px, 370px) minmax(0, 1fr); gap: 48px; align-items: start; }
+.write-panel { background: #fffef9; border: 1px solid var(--line); border-radius: 8px; padding: 28px; }
+.section-label { margin: 0 0 7px; color: var(--muted); font-size: 10px; letter-spacing: .16em; }
+h2 { font-size: 20px; font-weight: 650; letter-spacing: -.035em; margin: 0; }
+form { margin-top: 26px; }
+label { display: flex; justify-content: space-between; margin: 18px 0 8px; font-size: 13px; font-weight: 650; }
+label span { color: var(--muted); font-size: 11px; font-weight: 400; }
+input, textarea, button { width: 100%; font: inherit; }
+input, textarea { border: 1px solid #cdd2c6; border-radius: 4px; background: #fff; padding: 11px 12px; color: var(--ink); }
+input::placeholder, textarea::placeholder { color: #73796f; font-size: 12px; }
+textarea { resize: vertical; min-height: 150px; }
+:focus-visible { outline: 3px solid #8b9e6f; outline-offset: 3px; }
+.form-note { color: var(--muted); font-size: 11px; margin: 9px 0 20px; }
+button { display: flex; justify-content: space-between; border: 0; border-radius: 4px; padding: 13px 16px; color: white; background: var(--green); cursor: pointer; font-size: 13px; }
+button:hover { background: #254334; }
+.notes-panel { min-width: 0; scroll-margin-top: 24px; }
+.notes-heading { display: flex; align-items: center; justify-content: space-between; }
+.count { background: #e8ebdf; border-radius: 30px; padding: 3px 12px; font-size: 12px; }
+.list-note { color: var(--muted); font-size: 12px; margin: 12px 0 20px; }
+.entries { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+.entry { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.entry-meta { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; }
+.entry-meta strong { font-size: 13px; overflow-wrap: anywhere; }
+time { color: var(--muted); font-size: 10px; }
+.message { white-space: pre-wrap; overflow-wrap: anywhere; margin: 12px 0 0; font-size: 14px; }
+.empty { padding: 50px 12px; color: var(--muted); text-align: center; font-size: 13px; }
+.pagination { display: flex; justify-content: center; align-items: center; gap: 24px; padding-top: 24px; font-size: 12px; }
+.pagination span { color: var(--muted); }
+.notice, .error { padding: 12px; border-radius: 4px; font-size: 12px; margin: 18px 0 0; }
+.notice { background: #eaf0e2; color: #35502e; }
+.error { background: #faeee5; color: #874125; }
+footer { max-width: 1120px; margin: auto; border-top: 1px solid var(--line); padding: 24px 32px; color: var(--muted); font-size: 11px; display: flex; justify-content: space-between; gap: 12px; }
+@media (max-width: 760px) { .board { grid-template-columns: 1fr; gap: 38px; } main { padding: 38px 20px 48px; } .site-header { padding: 22px 20px; } .intro { padding-bottom: 32px; } .write-panel { padding: 22px; } footer { padding: 22px 20px; flex-direction: column; } }
